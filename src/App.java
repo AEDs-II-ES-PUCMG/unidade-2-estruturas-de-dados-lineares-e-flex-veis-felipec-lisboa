@@ -222,25 +222,32 @@ public class App {
 		
 		teclado = new Scanner(System.in, Charset.forName("UTF-8"));
         
-		nomeArquivoDados = "produtos.txt";
-        produtosCadastrados = lerProdutos(nomeArquivoDados);
+		// nomeArquivoDados = "produtos.txt";
+        // produtosCadastrados = lerProdutos(nomeArquivoDados);
         
-        Pedido pedido = null;
+        // Pedido pedido = null;
         
-        int opcao = -1;
+        // int opcao = -1;
       
-        do{
-            opcao = menu();
-            switch (opcao) {
-                case 1 -> listarTodosOsProdutos();
-                case 2 -> mostrarProduto(localizarProduto());
-                case 3 -> mostrarProduto(localizarProdutoDescricao());
-                case 4 -> pedido = iniciarPedido();
-                case 5 -> finalizarPedido(pedido);
-                case 6 -> listarProdutosPedidosRecentes();
-            }
-            pausa();
-        }while(opcao != 0);       
+        // do{
+        //     opcao = menu();
+        //     switch (opcao) {
+        //         case 1 -> listarTodosOsProdutos();
+        //         case 2 -> mostrarProduto(localizarProduto());
+        //         case 3 -> mostrarProduto(localizarProdutoDescricao());
+        //         case 4 -> pedido = iniciarPedido();
+        //         case 5 -> finalizarPedido(pedido);
+        //         case 6 -> listarProdutosPedidosRecentes();
+        //     }
+        //     pausa();
+        // }while(opcao != 0);       
+
+        int matricula[] = {8,0,6,2};
+        Pilha<Integer> pilha = new Pilha<>();
+        for(int i = 0; i < matricula.length;i++){
+            pilha.empilhar(matricula[i]);
+        }
+        pilha.imprime_certo();
 
         teclado.close();    
     }

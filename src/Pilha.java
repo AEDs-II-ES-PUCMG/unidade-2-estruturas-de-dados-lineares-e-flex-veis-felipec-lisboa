@@ -54,7 +54,24 @@ public class Pilha<E> {
 	 */
 	public Pilha<E> subPilha(int numItens) {
 		
-		
+
 		return null;
+	}
+	void imprimir() {
+		Celula<E> atual = topo;
+		while (atual!=fundo) {
+			System.out.println(atual.getItem());
+			atual = atual.getProximo();
+		}
+	}
+	void imprime_certo(){
+		Celula<E> atual = topo;
+		certo(atual);
+	}
+	void certo(Celula<E> atual){
+		if(atual!=fundo){
+			certo(atual.getProximo());
+			System.out.println(atual.getItem());
+		}
 	}
 }
