@@ -54,7 +54,7 @@ public class Pilha<E> {
 	 */
 	public Pilha<E> subPilha(int numItens) {
 		
-		// TODO
+		
 		return null;
 	}
 }
